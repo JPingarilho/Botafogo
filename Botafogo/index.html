@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon"  href="ícones/Escudo_Botafogo.png" sizes="16x16">
+    <title>Elenco Botafogo</title>
+    <style>
+      .borda-preta-arredondada {
+         border: 0.5px solid #000000; /* reduzi a largura da borda para 0.5px */
+         border-radius: 10px;
+         padding: 20px;
+         margin-left: auto;
+         text-align: center;
+         flex-wrap: wrap;
+         align-content: center;
+         justify-content: space-evenly;
+         background-color: #FFFFFF;
+       }
+     </style>
+  </head>
+
+  <body style="display: flex; height: 100vh; margin: 8px 0px;">
+    <div id="container-entrada" style="display: flex; flex-direction: column; margin: 0px; width: 100vw; min-width: unset;">
+      <div class="borda-preta-arredondada">
+        <div style="text-align: center; flex: 1 1 0%;display: flex; flex-direction: column; justify-content: center;">
+          <h1 style="margin: 0%px;">Elenco do Fogão em 2024-1</h1>
+          <p style="margin: 0px auto; max-width: 21em; text-align: center;" >Criado com objetivos exclusivamente didáticos para a disciplina Desenvolvimento Web do Ibmec Rio.</p>
+        </div>
+        <div id="fake-form" style="text-align: center; flex: 0.6 1 0%;">
+      
+          <form>
+            <input type="password" placeholder="Senha" id="senha" style="padding: 0.3em; margin: 0.5em;">
+            <input type="submit"  style="background-color: #F2C464; border: none; color: rgb(0, 0, 0); text-align: center; text-decoration: none; padding: 0.5em 1em; cursor: pointer;" onclick="logar(); return false"> 
+            <p style="margin: 0px auto;"> Efetue seu login, senha: fogao</p>
+          </form>
+          <script>
+            function logar(){
+              var senha = document.getElementById('senha').value;
+
+              if(senha == "fogao"){
+
+                alert('SUCESSO, clique em OK para conhecer os craques do fogão! ');
+                location.href = "segundo.html";
+              }else{
+                alert('senha incorreta');
+              }
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
